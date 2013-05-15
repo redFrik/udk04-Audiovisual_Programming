@@ -21,7 +21,7 @@ dates
 - [x] 06jan: [`110106`](https://github.com/redFrik/udk04-Audiovisual_Programming/blob/master/110106) own projects
 - [x] 13jan: [`110113`](https://github.com/redFrik/udk04-Audiovisual_Programming/blob/master/110113) own projects
 - [x] 20jan: [`110120`](https://github.com/redFrik/udk04-Audiovisual_Programming/blob/master/110120) own projects
-- [x] 27jan: [`110127`](https://github.com/redFrik/udk04-Audiovisual_Programming/blob/master/110127) own projects
+- [x] 27jan: `110127` own projects
 - [x] 28-30jan: presentations
 - [x] 03feb: [`110203`](https://github.com/redFrik/udk04-Audiovisual_Programming/blob/master/110203) review, discuss 3 works: [nosaj thing](http://createdigitalmotion.com/2009/09/elegant-design-and-giving-music-geometry-adam-guzman-julia-tsao/), [signal](http://www.youtube.com/watch?v=jmaxmMpLRxM&feature=player_detailpage#t=88s), [colour-projections](http://www.entracte.co.uk/project/theo-burt-e80/)
 - [x] 10feb: [`110210`](https://github.com/redFrik/udk04-Audiovisual_Programming/blob/master/110210) drawing audio waveforms. see robin fox - backscatter
