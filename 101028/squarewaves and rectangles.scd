@@ -122,7 +122,7 @@ u.drawFunc= {
 u.refresh;
 )
 
-	
+
 (
 u.drawFunc= {
 	Pen.fillColor= Color.green(0.5, 0.3);

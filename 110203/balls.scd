@@ -1,16 +1,16 @@
 (
 s.latency= 0.05;		//recommended setting - at least don't use the default 0.2
 s.waitForBoot{
-	
+
 	var width= 500, height= 500, t= 0, k= 0, speed= 0.03;
 	var win= Window("bonus 3- balls", Rect(300, 300, width, height), false);
 	var usr= UserView(win, Rect(0, 0, width, height));
-	
+
 	//--sound part
 	a= NodeProxy.new.play;
 	a.source= {|amp= 0.1, freq= 100, rq= 0.1| BPF.ar(WhiteNoise.ar(amp), freq, rq)!2};
-	
-	
+
+
 	//--midi input part
 	CCResponder.removeAll;		//clear out old responders - just for safty
 	CCResponder({|src, ch, num, val|
@@ -18,7 +18,7 @@ s.waitForBoot{
 			speed= val.linexp(0, 127, 0.003, 3);
 		});
 	});
-	
+
 	//--graphics part
 	usr.background= Color.white;
 	usr.clearOnRefresh= false;

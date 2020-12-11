@@ -99,7 +99,7 @@ o= OSCresponder(nil, \talk, {|t, r, msg|
 	msg.postln;
 	if(msg[1]==\anonym_but_me, {
 		Pbind(\instrument, \i1, \midinote, Pseq(msg[2].asString.ascii), \dur, 0.1, \pan, -1).play;
-		
+
 	}, {
 		if(msg[1]==\annie, {
 			Pbind(\instrument, \i2, \midinote, Pseq(msg[2].asString.ascii), \dur, 0.1, \pan, 1).play;
@@ -180,7 +180,7 @@ Routine({while({win.isClosed.not}, {usr.refresh; (1/25).wait})}).play(AppClock);
 
 
 
-//and last let us add some more data 
+//and last let us add some more data
 e= ();	//create a new dictionary
 CCResponder.removeAll;
 (

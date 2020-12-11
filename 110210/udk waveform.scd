@@ -156,7 +156,7 @@ var readSyn= Synth(\reader, [\bus, 0, \bufnum, b, \fps, 60]);
 usr.drawFunc= {
 	Pen.fillColor= Color.grey(0.5, ~trail); //for trails
 	Pen.fillRect(Rect(0, 0, width, height)); //for trails
-	
+
 	Pen.rotate(theta, width*0.5, height*0.5); //for spinning
 	Pen.translate(50, height*0.5);
 	readSyn.set(\sample, ~sample);
@@ -214,7 +214,7 @@ usr.drawFunc= {
 	Pen.smoothing= false;
 	Pen.fillColor= Color.grey(0.1, ~trail); //for trails
 	Pen.fillRect(Rect(0, 0, width, height)); //for trails
-	
+
 	Pen.rotate(theta, width*0.5, height*0.5); //for spinning
 	Pen.translate(50, height*0.5);
 	readSyn.set(\sample, ~sample);

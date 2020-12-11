@@ -4,7 +4,7 @@ sin(3340.9)		//any number will give a value between -1 and 1
 
 //radians 0-2pi.  2pi is almost 6.3
 
-//for one full cycle or sinewave, set values from 0 to 2pi (Å6.3)
+//for one full cycle or sinewave, set values from 0 to 2pi (â‰ˆ6.3)
 
 cos(123)			//same true for cos.  any number will give a value between -1 and 1.  only the start is shifted 25% or 1/4th of the cycle compared to the sin()
 cos(0)				//gives 1.  -1 to 1 cycle begins at the top
@@ -140,9 +140,9 @@ a.stop
 
 //often easier to understand what is happening if you write your code on separate lines
 (
-a.source= {SinOsc.ar(				//main oscillator - the one we are modulating
+a.source= {SinOsc.ar(			//main oscillator - the one we are modulating
 	SinOsc.ar(1, 0, 100, 500),	//freq - between 400 and 600 hz, spinning at 1hz
-	SinOsc.ar(2, 0, 2pi),			//phase - between -2pi and 2pi, 2hz
+	SinOsc.ar(2, 0, 2pi),		//phase - between -2pi and 2pi, 2hz
 	SinOsc.ar(3, 0, 0.5, 0.5)	//mul - (amp) between 0 and 1, 3hz
 );
 };
@@ -154,7 +154,7 @@ a.stop
 (
 a.source= {SinOsc.ar(
 	SinOsc.ar(10, 0, 100, 900),	//freq - between 800 and 1000 hz, spinning at 10hz
-	SinOsc.ar(2, 0, 2pi),			//phase - between -2pi and 2pi, 2hz
+	SinOsc.ar(2, 0, 2pi),		//phase - between -2pi and 2pi, 2hz
 	SinOsc.ar(3, 0, 0.5, 0.5)	//mul - (amp) between 0 and 1, 3hz
 )
 }
@@ -166,7 +166,7 @@ a.stop
 (
 a.source= {SinOsc.ar(
 	SinOsc.ar(0.3, 0, 20, 200),	//freq - between 180 and 220 hz, spinning at 0.3hz
-	SinOsc.ar(3, 0, 2pi),			//phase - between -2pi and 2pi, 3hz
+	SinOsc.ar(3, 0, 2pi),		//phase - between -2pi and 2pi, 3hz
 	SinOsc.ar(3, 0, 0.5, 0.5)	//mul - (amp) between 0 and 1, 3hz
 )
 }
@@ -178,7 +178,7 @@ a.stop
 (
 a.source= {SinOsc.ar(
 	SinOsc.ar(0.3, 0, 20, 200),	//freq - between 180 and 220 hz, spinning at 0.3hz
-	SinOsc.ar(30, 0, 2pi),			//phase - between -2pi and 2pi, 30hz
+	SinOsc.ar(30, 0, 2pi),		//phase - between -2pi and 2pi, 30hz
 	SinOsc.ar(3, 0, 0.5, 0.5)	//mul - (amp) between 0 and 1, 3hz
 )
 }

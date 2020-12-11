@@ -6,7 +6,7 @@ s.waitForBoot{
 	var win= Window("waveform", Rect(100, 100, width, height), false);
 	var usr= UserView(win, Rect(0, 0, width, height));
 	var buf, arr, osc, trk;
-	
+
 	//--reading samples
 	buf= Buffer.alloc(s, 640, 1);
 	SynthDef(\reader, {|bus= 0, bufnum, fps= 60, sample= 1|
@@ -17,28 +17,28 @@ s.waitForBoot{
 		SendTrig.ar(trig, 0, bufnum);
 	}).add;
 	s.sync;
-	
+
 	arr= Array.fill(buf.numFrames, 0);
 	osc= OSCresponder(s.addr, '/tr', {|t, r, m|
 		if(m[2]==0, {
 			buf.getn(0, buf.numFrames-1, {|data| arr= data});
 		});
 	}).add;
-	trk= Synth(\reader, [\in, 0, \bufnum, buf, \fps, 60]).play;
+	trk= Synth(\reader, [\in, 0, \bufnum, buf, \fps, 60]);
 	s.sync;
-	
+
 	//--interface
 	~sample= 1;
 	~speed= 0;
 	~trails= 1;
 	~version= 0;
-	
+
 	//--main loop
 	usr.drawFunc= {
 		trk.set(\sample, ~sample);
 		Pen.fillColor= Color.grey(0, ~trails);
 		Pen.fillRect(usr.bounds);			//manually clear with alpha
-		
+
 		Pen.strokeColor= Color.white;
 		switch(~version,
 			0, {									//line
@@ -72,7 +72,7 @@ s.waitForBoot{
 		);
 		theta= theta+~speed;
 	};
-	
+
 	//--window management
 	usr.animate= true;	//on linux replace with: Routine({while({win.isClosed.not}, {usr.refresh; (1/60).wait})}).play(AppClock);
 	usr.clearOnRefresh= false;		//do not erase - just draw on top of
@@ -83,7 +83,7 @@ s.waitForBoot{
 		buf.free;
 		osc.remove;
 	});
-	
+
 	//--testsound
 	s.sync;
 	Ndef(\snd).play;

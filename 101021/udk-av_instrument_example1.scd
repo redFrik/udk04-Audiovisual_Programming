@@ -5,7 +5,7 @@ s.waitForBoot{
 	var width= 500, height= 500;
 	var w= Window("a/v instrument example 1", Rect(99, 99, width, height), false);
 	var u= UserView(w, Rect(0, 0, width, height));
-	
+
 	//--variables
 	var theta= 0;		//a counter
 	var num= 15;		//try also with more balls
@@ -16,7 +16,7 @@ s.waitForBoot{
 		}, #[0.02, 0.05, 0.05]).play(s);
 	}.dup(num);
 	s.sync;
-	
+
 	//--interface
 	~speed= 0.5;
 	~radius= 10;
@@ -26,7 +26,7 @@ s.waitForBoot{
 	~offsetx= -0.1;
 	~offsety= -0.2;
 	~root= 100;
-	
+
 	//--main loop
 	u.drawFunc= {
 		Pen.fillColor= Color.red;		//set the fill color to red
@@ -48,7 +48,7 @@ s.waitForBoot{
 		};
 		theta= theta-~speed%2pi;		//our counter counts in radians
 	};
-	
+
 	//--window management
 	u.background= Color.white;
 	w.onClose= {syns.do{|x| x.free}};

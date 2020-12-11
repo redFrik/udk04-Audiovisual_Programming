@@ -23,17 +23,17 @@ o= [
 		("accelerometerZ"+m).postln;
 		a.set(\amp, m[1].abs.linlin(0, 1000, 0, 1).clip(0, 1));
 	}).add,
-	
+
 	OSCresponder(nil, "/mrmr/accelerometerY/10/redPod", {|t, r, m|
 		("accelerometerY"+m).postln;
 		a.set(\freq1, m[1].abs.linexp(0, 1000, 400, 800));
 	}).add,
-	
+
 	OSCresponder(nil, "/mrmr/accelerometerX/10/redPod", {|t, r, m|
 		("accelerometerX"+m).postln;
 		a.set(\freq2, m[1].abs.linexp(0, 1000, 400, 800));
 	}).add,
-	
+
 	OSCresponder(nil, "/mrmr/pushbutton/0/redPod", {|t, r, m|
 		("pushbutton"+m).postln;
 	}).add,

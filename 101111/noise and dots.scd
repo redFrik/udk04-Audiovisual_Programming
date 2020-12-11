@@ -63,7 +63,7 @@ w= Window("dot1", Rect(100, 100, 500, 500));
 u= UserView(w, Rect(0, 0, 500, 500));
 u.background= Color.white;
 u.drawFunc= {
-	Pen.setSmoothing(false);
+	Pen.smoothing_(false);
 	1000.do{
 		Pen.fillColor= Color.black;
 		Pen.fillRect(Rect(500.rand, 250.rand, 2, 2));
@@ -79,7 +79,7 @@ w= Window("dot2", Rect(100, 100, 500, 500));
 u= UserView(w, Rect(0, 0, 500, 500));
 u.background= Color.white;
 u.drawFunc= {
-	Pen.setSmoothing(false);
+	Pen.smoothing_(false);
 	1000.do{
 		Pen.fillColor= Color.black;
 		Pen.fillRect(Rect(500-500.linrand, 500-500.linrand, 2, 2));
@@ -95,7 +95,7 @@ w= Window("dot3", Rect(100, 100, 500, 500));
 u= UserView(w, Rect(0, 0, 500, 500));
 u.background= Color.white;
 u.drawFunc= {
-	Pen.setSmoothing(false);
+	Pen.smoothing_(false);
 	1000.do{
 		Pen.fillColor= Color.black;
 		Pen.fillRect(Rect(250.gauss(50).asInteger, 250.gauss(50).asInteger, 2, 2));
@@ -111,7 +111,7 @@ w= Window("dot4", Rect(100, 100, 500, 500));
 u= UserView(w, Rect(0, 0, 500, 500));
 u.background= Color.white;
 u.drawFunc= {
-	Pen.setSmoothing(false);
+	Pen.smoothing_(false);
 	1000.do{
 		Pen.fillColor= Color.black;
 		Pen.fillRect(Rect(250.gauss(50).asInteger, 250.gauss(50).asInteger, 2, 2));
@@ -131,7 +131,7 @@ w= Window("dot5", Rect(100, 100, 500, 500));
 u= UserView(w, Rect(0, 0, 500, 500));
 u.background= Color.white;
 u.drawFunc= {
-	Pen.setSmoothing(false);
+	Pen.smoothing_(false);
 	1000.do{|i|
 		Pen.fillColor= Color.black;
 		Pen.fillRect(Rect(i.linlin(0, 999, 0, 499).asInteger, i.linlin(0, 999, 0, 499).asInteger.rand, 2, 2));
@@ -147,7 +147,7 @@ w= Window("dot6", Rect(100, 100, 500, 500));
 u= UserView(w, Rect(0, 0, 500, 500));
 u.background= Color.white;
 u.drawFunc= {
-	Pen.setSmoothing(false);
+	Pen.smoothing_(false);
 	1000.do{|i|
 		Pen.fillColor= Color.black;
 		Pen.fillRect(Rect(i.linlin(0, 999, 0, 499).asInteger, 250+(i.rrand(0-i).linlin(-999, 999, -250, 250).asInteger), 2, 2));
@@ -163,7 +163,7 @@ w= Window("dot7", Rect(100, 100, 500, 500));
 u= UserView(w, Rect(0, 0, 500, 500));
 u.background= Color.white;
 u.drawFunc= {
-	Pen.setSmoothing(false);
+	Pen.smoothing_(false);
 	1000.do{|i|
 		Pen.fillColor= Color.black;
 		Pen.fillRect(Rect(i.linlin(0, 999, 0, 499).asInteger, 250.gauss(i.linlin(0, 999, 0, 50).asInteger), 2, 2));
@@ -180,7 +180,7 @@ u= UserView(w, Rect(0, 0, 640, 480));
 u.background= Color.black;
 u.drawFunc= {
 	Pen.fillColor= Color.white;
-	Pen.setSmoothing(false);		//also test with true
+	Pen.smoothing_(false);		//also test with true
 	160.do{|x|
 		120.do{|y|
 			Pen.fillRect(Rect(x.linlin(0, 160, 0, 640), y.linlin(0, 120, 0, 380), 2, 2));
@@ -198,7 +198,7 @@ u= UserView(w, Rect(0, 0, 640, 480));
 u.background= Color.black;
 u.drawFunc= {
 	Pen.fillColor= Color.white;
-	Pen.smoothing= true;	//same as Pen.setSmoothing(true)
+	Pen.smoothing= true;	//same as Pen.smoothing_(true)
 	160.do{|x|
 		120.do{|y|
 			Pen.fillRect(Rect(x.linlin(0, 160, 0, 640)+0.gauss(x.linlin(0, 159, 0, 0.5)), y.linlin(0, 120, 0, 480)+0.gauss(y.linlin(0, 119, 0, 0.5)), 2, 2));
@@ -222,7 +222,7 @@ u.drawFunc= {
 			Pen.fillRect(Rect(x.linlin(0, 159, 0, 640)+0.gauss(x.linlin(0, 159, 0, 0.5)), y.linlin(0, 119, 0, 480)+0.gauss(y.linlin(0, 119, 0, 0.5)), 2, 2));
 		};
 	};
-	
+
 	Pen.fillColor= Color.red;
 	16.do{|x|
 		12.do{|y|
